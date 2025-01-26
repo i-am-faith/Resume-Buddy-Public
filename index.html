@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Resume Buddy</title>
+    <link rel="icon"
+        href="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737553532/rb_brand-removebg-preview_1_mifrd8.png"
+        type="image/gif">
+    <style>
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        #carousel {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="text-gray-400 bg-gray-900 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                <img src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737553532/rb_brand-removebg-preview_1_mifrd8.png"
+                    alt="Logo" width="50px">
+                <span class="ml-3 text-xl">Resume Buddy</span>
+            </a>
+            <nav
+                class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700 md:text-base flex flex-wrap items-center text-sm justify-center">
+                <a href="#" class="mr-5 text-lg hover:text-white">Home</a>
+                <a href="administration.html" class="mr-5 text-lg hover:text-white">Resume Builder</a>
+                <a href="#Templates" class="mr-5 text-lg hover:text-white">Templates</a>
+                <a href="#Pricing" class="mr-5 text-lg hover:text-white">Pricing</a>
+                <a href="#About" class="mr-5 text-lg hover:text-white">About</a>
+            </nav>
+            <button
+                class="inline-flex items-center bg-blue-500 border-0 py-1 px-3 focus:outline-none hover:bg-blue-400 rounded text-white mt-4 md:mt-0">
+                <a href="https://www.linkedin.com/jobs/search/?currentJobId=4117366809&f_TPR=r2592000&keywords=software%20engineer&origin=JOB_SEARCH_PAGE_JOB_FILTER"
+                    class="text-lg" target="_blank">Jobs</a>
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+    <div class="relative isolate overflow-hidden bg-gray-900">
+        <svg class="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+            aria-hidden="true">
+            <defs>
+                <pattern id="983e3e4c-de6d-4c3f-8d64-b9761d1534cc" width="200" height="200" x="50%" y="-1"
+                    patternUnits="userSpaceOnUse">
+                    <path d="M.5 200V.5H200" fill="none" />
+                </pattern>
+            </defs>
+            <svg x="50%" y="-1" class="overflow-visible fill-gray-800/20">
+                <path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
+                    stroke-width="0" />
+            </svg>
+            <rect width="100%" height="100%" stroke-width="0" fill="url(#983e3e4c-de6d-4c3f-8d64-b9761d1534cc)" />
+        </svg>
+        <div class="absolute left-[calc(50%-4rem)] top-10 -z-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]"
+            aria-hidden="true">
+            <div class="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-20"
+                style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)">
+            </div>
+        </div>
+        <div class="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
+            <div class="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
+                <img class="h-24"
+                    src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737553532/rb_brand-removebg-preview_1_mifrd8.png"
+                    alt="Your Company">
+                <div class="mt-24 sm:mt-32 lg:mt-16">
+                    <a href="https://resume-buddy-builder.vercel.app/" class="inline-flex space-x-6">
+                        <span
+                            class="rounded-full bg-blue-500/10 px-3 py-1 text-sm font-semibold leading-6 text-blue-400 ring-1 ring-inset ring-blue-500/20">What's
+                            new</span>
+                        <span class="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-300">
+                            <span>Resume Builder</span>
+                            <svg class="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor"
+                                aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+                <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-5xl">Revolutionize Your
+                    Recruitment with Next-Gen Resume Parsing</h1>
+                <p class="mt-6 text-lg leading-8 text-gray-300">Unlock the potential of every application with our
+                    advanced resume parser, designed to enhance the speed and accuracy of
+                    your hiring decisions.
+                </p>
+                <div class="mt-10 flex items-center gap-x-6">
+                    <form>
+                        <div class="mt-10 flex flex-col sm:flex-row sm:items-center gap-x-6">
+                            <input type="file" name="pdf_doc" id="pdf_doc" accept=".pdf" class="drop-shadow-md bg-white/10 font-semibold text-gray-900 border border-blue-300 py-2 px-4 rounded-2xl block w-full text-sm text-slate-500
+                              file:mr-4 file:py-2 file:px-4
+                              file:rounded-full file:border-0
+                              file:text-sm file:font-semibold
+                              file:bg-blue-50 file:text-blue-400
+                              hover:file:bg-blue-100">
+
+                            <a href="administration.html"
+                                class="my-2 bg-blue-500 px-8 rounded-2xl py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-400/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                                Check Score
+                            </a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <div
+                class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-40 lg:max-w-none lg:flex-none xl:ml-32">
+                <div class="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none pl-20">
+                    <img src="https://res.cloudinary.com/dtsuvx8dz/image/upload/v1716357077/o1imiun4wwcpia9uucgs.gif"
+                        alt="App screenshot" width="2432" height="1442"
+                        class="w-[15rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10">
+                </div>
+            </div>
+        </div>
+        <!-- Slider Template Start-->
+        <section class="text-gray-400 bg-gray-900 body-font py-20" id="Templates">
+            <div class="container mx-auto px-5">
+                <h2
+                    class="text-3xl font-bold text-center title-font mb-8 text-white transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300">
+                    Templates
+                </h2>
+                <div class="relative">
+                    <!-- Left Arrow -->
+                    <button onclick="scrollPrev()"
+                        class="absolute top-1/2 left-0 transform -translate-y-1/2 text-white bg-gray-800 p-4 rounded-full text-3xl z-10">
+                        <img src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737451036/left-chevron_g9cpv2.png"
+                            alt="Left Arrow" class="w-8 h-8" />
+                    </button>
+                    <!-- Carousel Container -->
+                    <div id="carousel" class="flex overflow-x-auto snap-x snap-mandatory space-x-4 px-4 scrollbar-hide">
+                        <!-- Card 1 Sourin-->
+                        <div
+                            class="carousel-card min-w-[300px] snap-start bg-gray-800 rounded-lg p-4 flex-shrink-0 text-center">
+                            <img src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737559733/resume0_pumy6h.png"
+                                alt="Resume 1" class="w-full h-[350px] mb-4 rounded-lg" />
+                            <a href="https://drive.google.com/file/d/1YvKaO2om7VSJtFKnQQJPQ8cU5LF17l89/view?usp=drive_link"
+                                target="_blank" class="text-blue-500 hover:underline">Preview</a>
+                        </div>
+                        <!-- Card 2 Sachin-->
+                        <div
+                            class="carousel-card min-w-[300px] snap-start bg-gray-800 rounded-lg p-4 flex-shrink-0 text-center">
+                            <img src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737559735/resume1_bq3bm5.png"
+                                alt="Resume 2" class="w-full h-[350px] mb-4 rounded-lg" />
+                            <a href="https://drive.google.com/file/d/1HnYnShPhovEkpyIDqZpXv32OEOZFYxR6/view?usp=drive_link"
+                                target="_blank" class="text-blue-500 hover:underline">Preview</a>
+                        </div>
+                        <!-- Card 3 Nishant-->
+                        <div
+                            class="carousel-card min-w-[300px] snap-start bg-gray-800 rounded-lg p-4 flex-shrink-0 text-center">
+                            <img src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737559733/resume2_yiigip.png"
+                                alt="Resume 3" class="w-full h-[350px] mb-4 rounded-lg" />
+                            <a href="https://drive.google.com/file/d/1Q96WoH6LoAc5tCf3pIQp-nb2Y2zOTVKr/view?usp=drive_link"
+                                target="_blank" class="text-blue-500 hover:underline">Preview</a>
+                        </div>
+                        <!-- Card 4 Sarthak-->
+                        <div
+                            class="carousel-card min-w-[300px] snap-start bg-gray-800 rounded-lg p-4 flex-shrink-0 text-center">
+                            <img src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737559732/resume4_a1qbhz.png"
+                                alt="Resume 4" class="w-full h-[350px] mb-4 rounded-lg" />
+                            <a href="https://drive.google.com/file/d/1KBswlDzDm3mcluK0Rb0ZdfLg3WzVRb0y/view?usp=sharing"
+                                target="_blank" class="text-blue-500 hover:underline">Preview</a>
+                        </div>
+                        <!-- Card 5 Darshit-->
+                        <div
+                            class="carousel-card min-w-[300px] snap-start bg-gray-800 rounded-lg p-4 flex-shrink-0 text-center">
+                            <img src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737559731/resume5_l2xohg.png"
+                                alt="Resume 5" class="w-full h-[350px] mb-4 rounded-lg" />
+                            <a href="https://drive.google.com/file/d/1IZlnC985yks5TundIWiOz0-6zuwoCMTN/view?usp=sharing"
+                                target="_blank" class="text-blue-500 hover:underline">Preview</a>
+                        </div>
+                        <!-- Card 6 John-->
+                        <div
+                            class="carousel-card min-w-[300px] snap-start bg-gray-800 rounded-lg p-4 flex-shrink-0 text-center">
+                            <img src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737559731/resume6_iukdkb.png"
+                                alt="Resume 6" class="w-full h-[350px] mb-4 rounded-lg" />
+                            <a href="https://drive.google.com/file/d/1HvcP3TrCoLzrou_kRan1of29lXasF4uN/view?usp=sharing"
+                                target="_blank" class="text-blue-500 hover:underline">Preview</a>
+                        </div>
+                        <!-- Card 7 Devesh-->
+                        <div
+                            class="carousel-card min-w-[300px] snap-start bg-gray-800 rounded-lg p-4 flex-shrink-0 text-center">
+                            <img src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737559730/resume7_wgxfgl.png"
+                                alt="Resume 7" class="w-full h-[350px] mb-4 rounded-lg" />
+                            <a href="https://drive.google.com/file/d/1aHSssJeVPVejMJH5t2tu0AiQb98T2Ggy/view?usp=sharing"
+                                target="_blank" class="text-blue-500 hover:underline">Preview</a>
+                        </div>
+                        <!-- Card 8 Priyansh-->
+                        <div
+                            class="carousel-card min-w-[300px] snap-start bg-gray-800 rounded-lg p-4 flex-shrink-0 text-center">
+                            <img src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737559729/resume8_gxze2k.png"
+                                alt="Resume 1" class="w-full h-[350px] mb-4 rounded-lg" />
+                            <a href="https://drive.google.com/file/d/121mQMDCU-WnHUSrfwrxXDtuFxEeCZ3Nm/view?usp=sharing"
+                                target="_blank" class="text-blue-500 hover:underline">Preview</a>
+                        </div>
+                        <!-- Card 9 Writankar-->
+                        <div
+                            class="carousel-card min-w-[300px] snap-start bg-gray-800 rounded-lg p-4 flex-shrink-0 text-center">
+                            <img src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737560329/resume7_pzdywd.png"
+                                alt="Resume 1" class="w-full h-[350px] mb-4 rounded-lg" />
+                            <a href="https://drive.google.com/file/d/1oMzq1q9JncdoHKaUMP3ixQ0ulmrAp7lv/view?usp=sharing"
+                                target="_blank" class="text-blue-500 hover:underline">Preview</a>
+                        </div>
+                        <!-- Card 10 Harsit-->
+                        <div
+                            class="carousel-card min-w-[300px] snap-start bg-gray-800 rounded-lg p-4 flex-shrink-0 text-center">
+                            <img src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737559730/resume10_fymv5l.png"
+                                alt="Resume 1" class="w-full h-[350px] mb-4 rounded-lg" />
+                            <a href="https://drive.google.com/file/d/14zD677auBYsG3S0NJS8GVEDcHedKFepv/view?usp=sharing"
+                                target="_blank" class="text-blue-500 hover:underline">Preview</a>
+                        </div>
+                        <!-- Card 11 Prateek-->
+                        <div
+                            class="carousel-card min-w-[300px] snap-start bg-gray-800 rounded-lg p-4 flex-shrink-0 text-center">
+                            <img src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737559729/resume11_upndn4.png"
+                                alt="Resume 1" class="w-full h-[350px] mb-4 rounded-lg" />
+                            <a href="https://drive.google.com/file/d/1r8GJL8L1XylVYr_HXJ4jXVHSTs74yOIX/view?usp=sharing"
+                                target="_blank" class="text-blue-500 hover:underline">Preview</a>
+                        </div>
+                        <!-- Card 12 Gourav-->
+                        <div
+                            class="carousel-card min-w-[300px] snap-start bg-gray-800 rounded-lg p-4 flex-shrink-0 text-center">
+                            <img src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737559732/resume12_hrfsir.png"
+                                alt="Resume 1" class="w-full h-[350px] mb-4 rounded-lg" />
+                            <a href="https://drive.google.com/file/d/1inYGPSZEHWpw-micSlkkKYOv0VDv69kR/view?usp=sharing"
+                                target="_blank" class="text-blue-500 hover:underline">Preview</a>
+                        </div>
+                        <!-- Card 13 Jake-->
+                        <div
+                            class="carousel-card min-w-[300px] snap-start bg-gray-800 rounded-lg p-4 flex-shrink-0 text-center">
+                            <img src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737559731/resume13_kljryc.png"
+                                alt="Resume 1" class="w-full h-[350px] mb-4 rounded-lg" />
+                            <a href="https://drive.google.com/file/d/1BzfPzzDjeiQ05zkZjplReZI-62mLIrPE/view?usp=sharing"
+                                target="_blank" class="text-blue-500 hover:underline">Preview</a>
+                        </div>
+                        <!-- Card 14 Soujash-->
+                        <div
+                            class="carousel-card min-w-[300px] snap-start bg-gray-800 rounded-lg p-4 flex-shrink-0 text-center">
+                            <img src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737560950/resume15_ngwfhb.png"
+                                alt="Resume 1" class="w-full h-[350px] mb-4 rounded-lg" />
+                            <a href="https://drive.google.com/file/d/1Z7Nxqlmlh2mq9i3cwi33rw0RcDLRxuHD/view?usp=sharing"
+                                target="_blank" class="text-blue-500 hover:underline">Preview</a>
+                        </div>
+                        <!-- Card 15 Vamshi-->
+                        <div
+                            class="carousel-card min-w-[300px] snap-start bg-gray-800 rounded-lg p-4 flex-shrink-0 text-center">
+                            <img src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737561214/resume14-1_xkzbea.png"
+                                alt="Resume 1" class="w-full h-[350px] mb-4 rounded-lg" />
+                            <a href="https://drive.google.com/file/d/1seBNTin5oayzjwZHB-lTmz3megbP1OhY/view?usp=sharing"
+                                target="_blank" class="text-blue-500 hover:underline">Preview</a>
+                        </div>
+                    </div>
+                    <!-- Right Arrow -->
+                    <button onclick="scrollNext()"
+                        class="absolute top-1/2 right-0 transform -translate-y-1/2 text-white bg-gray-800 p-4 rounded-full text-3xl z-10">
+                        <img src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737451035/right-chevron_djoowi.png"
+                            alt="Right Arrow" class="w-8 h-8" />
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Slider Template End-->
+        <!-- Pricing Start-->
+        <section id="Pricing" class="text-gray-400 bg-gray-900 body-font overflow-hidden">
+            <div class="container px-5 py-24 mx-auto">
+                <div class="flex flex-col text-center w-full mb-20">
+                    <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-white">Pricing</h1>
+                    <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon
+                        brooklyn asymmetrical.</p>
+                    <div class="flex mx-auto border-2 border-indigo-500 rounded overflow-hidden mt-6">
+                        <button class="py-1 px-4 bg-indigo-500 text-white focus:outline-none">Monthly</button>
+                        <button class="py-1 px-4 text-gray-300 focus:outline-none">Annually</button>
+                    </div>
+                </div>
+                <div class="flex flex-wrap -m-4">
+                    <div class="p-4 xl:w-1/3 md:w-1/2 w-full">
+                        <div
+                            class="h-full p-6 rounded-lg border-2 border-gray-700 flex flex-col relative overflow-hidden">
+                            <h2 class="text-sm tracking-widest text-gray-400 title-font mb-1 font-medium">START</h2>
+                            <h1 class="text-5xl text-white pb-4 mb-4 border-b border-gray-800 leading-none">Free</h1>
+                            <p class="flex items-center text-gray-400 mb-2">
+                                <span
+                                    class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                                        <path d="M20 6L9 17l-5-5"></path>
+                                    </svg>
+                                </span>
+                                5 Free Resume Parsing
+                            </p>
+                            <p class="flex items-center text-gray-400 mb-2">
+                                <span
+                                    class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                                        <path d="M20 6L9 17l-5-5"></path>
+                                    </svg>
+                                </span>
+                                1 Free Resume Build
+                            </p>
+                            <button
+                                class="flex items-center mt-auto text-white bg-gray-800 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-700 rounded">
+                                Button
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4 xl:w-1/3 md:w-1/2 w-full">
+                        <div
+                            class="h-full p-6 rounded-lg border-2 border-indigo-500 flex flex-col relative overflow-hidden">
+                            <span
+                                class="bg-indigo-500 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">POPULAR</span>
+                            <h2 class="text-sm tracking-widest text-gray-400 title-font mb-1 font-medium">PRO</h2>
+                            <h1
+                                class="text-5xl text-white leading-none flex items-center pb-4 mb-4 border-b border-gray-800">
+                                <span>₹90</span>
+                                <span class="text-lg ml-1 font-normal text-gray-400">/mo</span>
+                            </h1>
+                            <p class="flex items-center text-gray-400 mb-2">
+                                <span
+                                    class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                                        <path d="M20 6L9 17l-5-5"></path>
+                                    </svg>
+                                </span>
+                                Perform up to 30 ATS checks to optimize your resume.
+                            </p>
+                            <p class="flex items-center text-gray-400 mb-2">
+                                <span
+                                    class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                                        <path d="M20 6L9 17l-5-5"></path>
+                                    </svg>
+                                </span>
+                                Build your resume up to 20 times with advanced tools.
+                            </p>
+                            <p class="flex items-center text-gray-400 mb-2">
+                                <span
+                                    class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                                        <path d="M20 6L9 17l-5-5"></path>
+                                    </svg>
+                                </span>
+                                Get expert help with 5 personalized resume requests.
+                            </p>
+                            <p class="flex items-center text-gray-400 mb-6">
+                                <span
+                                    class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                                        <path d="M20 6L9 17l-5-5"></path>
+                                    </svg>
+                                </span>
+                                Receive unlimited WhatsApp alerts for matching jobs.
+                            </p>
+                            <button
+                                class="flex items-center mt-auto text-white bg-indigo-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded">
+                                Button
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4 xl:w-1/3 md:w-1/2 w-full">
+                        <div
+                            class="h-full p-6 rounded-lg border-2 border-gray-700 flex flex-col relative overflow-hidden">
+                            <h2 class="text-sm tracking-widest text-gray-400 title-font mb-1 font-medium">SPECIAL</h2>
+                            <h1
+                                class="text-5xl text-white leading-none flex items-center pb-4 mb-4 border-b border-gray-800">
+                                <span>₹200</span>
+                                <span class="text-lg ml-1 font-normal text-gray-400">/mo</span>
+                            </h1>
+                            <p class="flex items-center text-gray-400 mb-2">
+                                <span
+                                    class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                                        <path d="M20 6L9 17l-5-5"></path>
+                                    </svg>
+                                </span>
+                                Perform up to 100 ATS checks to optimize your resume.
+                            </p>
+                            <p class="flex items-center text-gray-400 mb-2">
+                                <span
+                                    class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                                        <path d="M20 6L9 17l-5-5"></path>
+                                    </svg>
+                                </span>
+                                Build your resume Unlimited times with advanced tools.
+                            </p>
+                            <p class="flex items-center text-gray-400 mb-2">
+                                <span
+                                    class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                                        <path d="M20 6L9 17l-5-5"></path>
+                                    </svg>
+                                </span>
+                                Get expert help with 20 personalized resume requests.
+                            </p>
+                            <p class="flex items-center text-gray-400 mb-6">
+                                <span
+                                    class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                                        <path d="M20 6L9 17l-5-5"></path>
+                                    </svg>
+                                </span>
+                                Receive Unlimited WhatsApp alerts for matching jobs.
+                            </p>
+                            <button
+                                class="flex items-center mt-auto text-white bg-gray-800 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-700 rounded">
+                                Button
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Pricing End-->
+        <!-- Our Team Start-->
+        <section id="About" class="text-gray-400 bg-gray-900 body-font py-20">
+            <div class="container px-5 mx-auto">
+                <div class="flex flex-col text-center w-full mb-20">
+                    <h2
+                        class="text-3xl font-bold text-center title-font mb-8 text-white transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300">
+                        OUR TEAM
+                    </h2>
+                    <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+                        Meet our dedicated and talented team members who bring this vision to life.
+                    </p>
+                </div>
+                <!-- Team Members -->
+                <div class="flex flex-wrap -m-4 justify-center">
+                    <div class="p-4 w-full">
+                        <div
+                            class="h-full flex items-center justify-center text-center sm:text-left bg-gray-800 rounded-lg p-6">
+                            <img alt="team"
+                                class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center mb-4 sm:mb-0"
+                                src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737481297/amiya_h1t6zk.png">
+                            <div class="flex-grow sm:pl-8">
+                                <h2 class="title-font font-medium text-lg text-white">Dr. Amiya Ranjan Panda</h2>
+                                <h3 class="text-gray-500 mb-3">Assistant Professor & Project Guide</h3>
+                                <p class="mb-4">Dr. Amiya Ranjan Panda has seven years of research experience at DRDO,
+                                    specializing in Software Defined Radio and real-time systems.
+                                    He holds a B.Tech in Information Technology, an M.Tech in Computer Science, and a
+                                    Ph.D. in Computer Science from Siksha “O” Anusandhan University.
+                                    Dr. Panda has worked as JRF, SRF, and RA at DRDO and currently serves as an
+                                    Assistant Professor at KIIT University. His research interests include Machine
+                                    Learning, IoT, Data Acquisition,
+                                    and Software Defined Radio. He has published 15 international journals, including
+                                    two in IEEE Transactions.
+                                </p>
+                                <span class="inline-flex">
+                                    <a href="https://www.facebook.com/amiya.panda.142/" target="_blank"
+                                        class="text-gray-500 ml-2 p-2">
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                                            viewBox="0 0 24 24">
+                                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                    <a href="https://scholar.google.co.in/citations?user=0LwzlT8AAAAJ" target="_blank"
+                                        class="text-gray-800 ml-2 p-2">
+                                        <img src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737390924/open-book-svgrepo-com_tqpgts.svg"
+                                            class="w-5 h-5" alt="GitHub">
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/amiya-ranjan-panda-4445a127" target="_blank"
+                                        class="ml-2 text-gray-500 p-2">
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24"
+                                            style="user-select: auto;">
+                                            <path stroke="none"
+                                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                                                style="user-select: auto;"></path>
+                                            <circle cx="4" cy="4" r="2" stroke="none" style="user-select: auto;">
+                                            </circle>
+                                        </svg>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 w-full">
+                        <div
+                            class="h-full flex items-center justify-center text-center sm:text-left bg-gray-800 rounded-lg p-6">
+                            <img alt="team"
+                                class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center mb-4 sm:mb-0"
+                                src="https://res.cloudinary.com/dcs2ww2g5/image/upload/c_crop,w_192,h_192,g_auto/v1737378440/manoj-sir_wrxitg.png">
+                            <div class="flex-grow sm:pl-8">
+                                <h2 class="title-font font-medium text-lg text-white">Manoj Kumar Mishra</h2>
+                                <h3 class="text-gray-500 mb-3">Associate Professor & Project Guide</h3>
+                                <p class="mb-4">Dr. Manoj Kumar Mishra has 14 years of experience, including 1.5 years
+                                    in Mainframe Technologies and the rest in teaching B.Tech and M.Tech students.
+                                    He holds multiple degrees, including a Ph.D. in Computer Science and Engineering,
+                                    and has supervised 26 M.Tech graduates. His research focuses on Algorithm Design,
+                                    Cloud Computing, and Data Analytics,
+                                    with numerous publications and a patent. A member of IEEE, IET, ISTE, and ISC, he
+                                    actively participates in university committees, contributing significantly to
+                                    academics and research.
+                                </p>
+                                <span class="inline-flex">
+                                    <a href="https://www.facebook.com/manojkumar.mishra.1428" target="_blank"
+                                        class="text-gray-500 ml-2 p-2">
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                                            viewBox="0 0 24 24">
+                                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                    <a href="https://scholar.google.co.in/citations?user=DpqWIacAAAAJ" target="_blank"
+                                        class="text-gray-800 ml-2 p-2">
+                                        <img src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737390924/open-book-svgrepo-com_tqpgts.svg"
+                                            class="w-5 h-5" alt="GitHub">
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/manoj-kumar-mishra-ba6b0b79/" target="_blank"
+                                        class="ml-2 text-gray-500 p-2">
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24"
+                                            style="user-select: auto;">
+                                            <path stroke="none"
+                                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                                                style="user-select: auto;"></path>
+                                            <circle cx="4" cy="4" r="2" stroke="none" style="user-select: auto;">
+                                            </circle>
+                                        </svg>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 lg:w-1/3 md:w-1/2">
+                        <div class="h-full bg-gray-800 rounded-lg p-6 flex flex-col items-center text-center">
+                            <img alt="team" class="w-24 h-24 mb-4 object-cover object-center rounded-full"
+                                src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737743414/Photo_SM_2_uujk78.jpg">
+                            <h2 class="title-font font-medium text-lg text-white">Sourin Mukherjee</h2>
+                            <h3 class="text-gray-500 mb-3">Front-End Developer & Data Analyst</h3>
+                            <p class="mb-4">Have Faith in Yourself.</p>
+                            <span class="inline-flex">
+                                <a href="https://www.facebook.com/sourin.mukherjee833" target="_blank"
+                                    class="text-gray-500 ml-2">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a href="https://github.com/i-am-faith" target="_blank" class="text-gray-800 ml-2">
+                                    <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 
+                                            2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 
+                                            0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 
+                                            1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a href="https://www.linkedin.com/in/sourin-mukherjee2105833/" target="_blank"
+                                    class="ml-2 text-gray-500">
+                                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24"
+                                        style="user-select: auto;">
+                                        <path stroke="none"
+                                            d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                                            style="user-select: auto;"></path>
+                                        <circle cx="4" cy="4" r="2" stroke="none" style="user-select: auto;"></circle>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-4 lg:w-1/3 md:w-1/2">
+                        <div class="h-full bg-gray-800 rounded-lg p-6 flex flex-col items-center text-center">
+                            <img alt="team" class="w-24 h-24 mb-4 object-cover object-center rounded-full"
+                                src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737743538/suraj_qyfxij.jpg">
+                            <h2 class="title-font font-medium text-lg text-white">Suraj Dey</h2>
+                            <h3 class="text-gray-500 mb-3">Data Analyst & API Manager</h3>
+                            <p class="mb-4">Designing intuitive and aesthetic user interfaces.</p>
+                            <span class="inline-flex">
+                                <a href="https://www.facebook.com/profile.php?id=100009720644483" target="_blank"
+                                    class="text-gray-500 ml-2">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a href="https://github.com/suraj165d" target="_blank" class="text-gray-800 ml-2">
+                                    <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 
+                                            0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 
+                                            0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0
+                                            1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a href="https://www.linkedin.com/in/-surajdey/" target="_blank"
+                                    class="ml-2 text-gray-500">
+                                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24"
+                                        style="user-select: auto;">
+                                        <path stroke="none"
+                                            d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                                            style="user-select: auto;"></path>
+                                        <circle cx="4" cy="4" r="2" stroke="none" style="user-select: auto;"></circle>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-4 lg:w-1/3 md:w-1/2">
+                        <div class="h-full bg-gray-800 rounded-lg p-6 flex flex-col items-center text-center">
+                            <img alt="team" class="w-24 h-24 mb-4 object-cover object-center rounded-full"
+                                src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737385739/profile-pic_sanvlf.png">
+                            <h2 class="title-font font-medium text-lg text-white">Writankar Biswas</h2>
+                            <h3 class="text-gray-500 mb-3">Back-End Developer & Tester</h3>
+                            <p class="mb-4">Simplicity is the key to happiness.</p>
+                            <span class="inline-flex">
+                                <a href="https://www.facebook.com/writankar.biswas" target="_blank"
+                                    class="text-gray-500 ml-2">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a href="https://github.com/coderwrit" target="_blank" class="text-gray-800 ml-2">
+                                    <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0
+                                            0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0
+                                            0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 
+                                            0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a href="https://www.linkedin.com/in/writankar-biswas-3195521bb/" target="_blank"
+                                    class="ml-2 text-gray-500">
+                                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24"
+                                        style="user-select: auto;">
+                                        <path stroke="none"
+                                            d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                                            style="user-select: auto;"></path>
+                                        <circle cx="4" cy="4" r="2" stroke="none" style="user-select: auto;"></circle>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Our Team End-->
+        <!-- <h1> Footer Start/h1> -->
+        <footer class="text-gray-400 bg-gray-900 body-font" style="user-select: auto;">
+            <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col" style="user-select: auto;">
+                <a class="flex title-font font-medium items-center md:justify-start justify-center text-white"
+                    style="user-select: auto;">
+                    <img src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737553532/rb_brand-removebg-preview_1_mifrd8.png"
+                        alt="Resume-Buddy" width="50px">
+                    <span class="ml-3 text-xl" style="user-select: auto;">Resume Buddy</span>
+                </a>
+                <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4"
+                    style="user-select: auto;">© 2025 — Estd.
+                    <a href="https://linktr.ee/i_am_faith_007" class="text-gray-500 ml-1 cursor-pointer" target="_blank"
+                        rel="noopener noreferrer" style="user-select: auto;">@i_am_faith_007</a>
+                </p>
+                <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start cursor-pointer"
+                    style="user-select: auto;">
+                    <a href="https://www.facebook.com/sourin.mukherjee833" target="_blank" class="text-gray-100"
+                        style="user-select: auto;">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24" style="user-select: auto;">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                                style="user-select: auto;"></path>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/i-am-faith" target="_blank" class="ml-3 text-gray-400"
+                        style="user-select: auto;">
+                        <svg class="w-5 h-5 text-gray-700 dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/i_am_faith_007/" target="_blank" class="ml-3 text-gray-200"
+                        style="user-select: auto;">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24" style="user-select: auto;">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" style="user-select: auto;"></rect>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
+                                style="user-select: auto;"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sourin-mukherjee2105833/" class="ml-3 text-gray-200"
+                        style="user-select: auto;">
+                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24" style="user-select: auto;">
+                            <path stroke="none"
+                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                                style="user-select: auto;"></path>
+                            <circle cx="4" cy="4" r="2" stroke="none" style="user-select: auto;"></circle>
+                        </svg>
+                    </a>
+                </span>
+            </div>
+        </footer>
+        <!-- <h1> Fototer End/h1> -->
+        <script>
+            const carousel = document.getElementById("carousel");
+
+            function getCardWidth() {
+                const card = document.querySelector('.carousel-card');
+                const cardStyle = window.getComputedStyle(card);
+                const marginRight = parseFloat(cardStyle.marginRight) || 0;
+                return card.offsetWidth + marginRight;
+            }
+
+            function scrollNext() {
+                const step = getCardWidth();
+                carousel.scrollBy({ left: step, behavior: 'smooth' });
+            }
+
+            function scrollPrev() {
+                const step = getCardWidth();
+                carousel.scrollBy({ left: -step, behavior: 'smooth' });
+            }
+        </script>
+</body>
+
+</html>
