@@ -7,10 +7,13 @@
 <p>By furnishing clients with a definite investigation of their resumes, the application enables work searchers to enhance their resumes for better perceivability and similarity with ATS.</p>
 
 ### Tech Stack - 
-<img src="https://skillicons.dev/icons?i=html,css,js,react,nextjs,flask,py,vercel"/>
+<img src="https://skillicons.dev/icons?i=html,css,js,react,nextjs,flask,py,opencv,vercel,firebase"/>
 
 ### Site Preview (Home)
 ![image](https://res.cloudinary.com/dcs2ww2g5/image/upload/v1737557486/Screenshot_from_2025-01-22_20-20-32_zwbifd.png)
+
+### Resume Parsing
+<p align="center"><img src="https://imgur.com/W9StM78.gif" width="1080px"></p>
 
 ### Templates
 <p align="center"><img src="https://imgur.com/reEvYb2.gif" width="1080px"></p>
@@ -24,9 +27,13 @@
 #### Overview: 
 This App is created for job seekers to test whether their resumes are ATS friendly or not.
 
+### Video(Recommender)
+<p align="center"><img src="https://res.cloudinary.com/dcs2ww2g5/image/upload/v1742461826/Untitledvideo-MadewithClipchamp7-ezgif.com-video-to-gif-converter_mrgupm.gif" width="1080px"></p>
+
 #### Features: 
 ATS - Ability to extract specific information from resumes, the use of JSON format for presenting the extracted data, and the integration of various libraries and tools for parsing resumes.
 Builder - Ability to build Resume with your personal details.
+Recommender - Ability to help users to find their dream job based on their skillset
 
 ### License
 <a href="https://choosealicense.com/licenses/gpl-3.0/">GNU General Public License v3.0</a>
